@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:kk4rpl_project/ui/pages/navigation_pages.dart';
 
 void main() {
-  runApp(const MaterialApp(
-    home: HalHallo(),
+  runApp(MaterialApp(
+    home: const HalHallo(),
+    initialRoute: '/Navigation',
+    routes: <String, WidgetBuilder>{
+      '/Navigation': (BuildContext context) => const NavigationPages(),
+      '/Route': (BuildContext context) => const RoutesPages(),
+    },
   ));
 }
 
