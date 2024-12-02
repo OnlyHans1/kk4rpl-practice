@@ -12,7 +12,7 @@ class SmartphoneImage extends StatelessWidget {
             Padding(padding: EdgeInsets.all(20),),
             Text("Smartphone", style: TextStyle(fontSize: 30),),
             Padding(padding: EdgeInsets.all(20),),
-            Image(image: NetworkImage("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.ubuy.co.id%2Fid%2Fproduct%2FBP6DK8GL2-smart-phone-12-pro-android-5-1-smartphone-hd-full-screen-phone-dual-sim-unlocked-smart-phone-2g-ram-8gb-rom-5-0-inch-cellphones-mobile-phones&psig=AOvVaw11QkyJLOHgUjI_G-hebyUy&ust=1733221908539000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPiQ8oTxiIoDFQAAAAAdAAAAABAE",), width: 200,),
+            Image(image: NetworkImage("https://images-cdn.ubuy.com.sa/63b46431ffafdf2f462e84a6-christmas-gifts-clearance-cbcbtwo-smart.jpg",), width: 200,),
           ],
         ),
       ),

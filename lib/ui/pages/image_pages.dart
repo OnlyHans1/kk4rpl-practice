@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:kk4rpl_project/ui/widgets/komputer_pages.dart' as komputer;
-import 'package:kk4rpl_project/ui/widgets/headset_pages.dart' as headset;
-import 'package:kk4rpl_project/ui/widgets/radio_pages.dart' as radio;
-import 'package:kk4rpl_project/ui/widgets/smartphone_pages.dart' as smartphone;
+import 'package:kk4rpl_project/ui/widgets/komputer_images.dart' as komputer;
+import 'package:kk4rpl_project/ui/widgets/headset_images.dart' as headset;
+import 'package:kk4rpl_project/ui/widgets/radio_images.dart' as radio;
+import 'package:kk4rpl_project/ui/widgets/smartphone_images.dart' as smartphone;
 
 class ImagePages extends StatefulWidget {
   const ImagePages({super.key});
@@ -60,10 +60,10 @@ class _ImagePagesState extends State<ImagePages> with SingleTickerProviderStateM
       body: TabBarView(
         controller: controller,
         children: const [
-          komputer.Komputer(),
-          headset.Headset(),
-          radio.Radio(),
-          smartphone.Smartphone(),
+          komputer.KomputerImage(),
+          headset.HeadsetImage(),
+          radio.RadioImage(),
+          smartphone.SmartphoneImage(),
         ],
       ),
       bottomNavigationBar: Material(
