@@ -12,10 +12,11 @@ class StylePages extends StatelessWidget {
       width: 200,
       height: 100,
       child: const Center(
-        child: Icon(
-          Icons.android, color: Colors.green, size: 70,
-        )
-      ),
+          child: Icon(
+        Icons.android,
+        color: Colors.green,
+        size: 70,
+      )),
     )));
   }
 }

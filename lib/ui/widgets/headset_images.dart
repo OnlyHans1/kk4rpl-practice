@@ -9,10 +9,20 @@ class HeadsetImage extends StatelessWidget {
       child: Center(
         child: Column(
           children: [
-            Padding(padding: EdgeInsets.all(20),),
-            Text("Headset", style: TextStyle(fontSize: 30),),
-            Padding(padding: EdgeInsets.all(20),),
-            Image.asset("assets/headset.jpg", width: 200,)
+            const Padding(
+              padding: EdgeInsets.all(20),
+            ),
+            const Text(
+              "Headset",
+              style: TextStyle(fontSize: 30),
+            ),
+            const Padding(
+              padding: EdgeInsets.all(20),
+            ),
+            Image.asset(
+              "assets/headset.jpg",
+              width: 200,
+            )
           ],
         ),
       ),

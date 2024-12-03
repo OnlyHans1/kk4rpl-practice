@@ -9,10 +9,20 @@ class Headset extends StatelessWidget {
       child: const Center(
         child: Column(
           children: [
-            Padding(padding: EdgeInsets.all(20),),
-            Text("Headset", style: TextStyle(fontSize: 30),),
-            Padding(padding: EdgeInsets.all(20),),
-            Icon(Icons.headset, size: 90,)
+            Padding(
+              padding: EdgeInsets.all(20),
+            ),
+            Text(
+              "Headset",
+              style: TextStyle(fontSize: 30),
+            ),
+            Padding(
+              padding: EdgeInsets.all(20),
+            ),
+            Icon(
+              Icons.headset,
+              size: 90,
+            )
           ],
         ),
       ),

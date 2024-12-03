@@ -5,6 +5,7 @@ import 'package:kk4rpl_project/ui/pages/navigation_pages.dart';
 import 'package:kk4rpl_project/ui/pages/appbar_pages.dart';
 import 'package:kk4rpl_project/ui/pages/card_pages.dart';
 import 'package:kk4rpl_project/ui/pages/image_pages.dart';
+import 'package:kk4rpl_project/ui/pages/snackbar_pages.dart';
 import 'package:kk4rpl_project/ui/pages/tabbar_pages.dart';
 import 'package:kk4rpl_project/ui/pages/style_pages.dart';
 import 'package:kk4rpl_project/ui/pages/list_pages.dart';
@@ -30,8 +31,9 @@ class MyApp extends StatelessWidget {
         '/ImagePage': (BuildContext context) => const ImagePages(),
         '/TabbarPage': (BuildContext context) => const TabbarPages(),
         '/StylePage': (BuildContext context) => const StylePages(),
-        '/ListView' : (BuildContext context) => const ListViewPages(),
+        '/ListView': (BuildContext context) => const ListViewPages(),
         '/ListViewJson': (BuildContext context) => const ListViewJsonPages(),
+        '/SnackbarPage': (BuildContext context) => const SnackbarPages(),
       },
     );
   }
@@ -48,7 +50,7 @@ class HalHallo extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text(
-              'Hello, World!', 
+              'Hello, World!',
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,

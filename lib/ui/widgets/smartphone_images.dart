@@ -9,10 +9,22 @@ class SmartphoneImage extends StatelessWidget {
       child: const Center(
         child: Column(
           children: [
-            Padding(padding: EdgeInsets.all(20),),
-            Text("Smartphone", style: TextStyle(fontSize: 30),),
-            Padding(padding: EdgeInsets.all(20),),
-            Image(image: NetworkImage("https://images-cdn.ubuy.com.sa/63b46431ffafdf2f462e84a6-christmas-gifts-clearance-cbcbtwo-smart.jpg",), width: 200,),
+            Padding(
+              padding: EdgeInsets.all(20),
+            ),
+            Text(
+              "Smartphone",
+              style: TextStyle(fontSize: 30),
+            ),
+            Padding(
+              padding: EdgeInsets.all(20),
+            ),
+            Image(
+              image: NetworkImage(
+                "https://images-cdn.ubuy.com.sa/63b46431ffafdf2f462e84a6-christmas-gifts-clearance-cbcbtwo-smart.jpg",
+              ),
+              width: 200,
+            ),
           ],
         ),
       ),

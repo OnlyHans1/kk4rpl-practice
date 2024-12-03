@@ -11,7 +11,8 @@ class ImagePages extends StatefulWidget {
   State<ImagePages> createState() => _ImagePagesState();
 }
 
-class _ImagePagesState extends State<ImagePages> with SingleTickerProviderStateMixin {
+class _ImagePagesState extends State<ImagePages>
+    with SingleTickerProviderStateMixin {
   late TabController controller;
 
   @override

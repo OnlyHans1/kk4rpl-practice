@@ -9,10 +9,20 @@ class Komputer extends StatelessWidget {
       child: const Center(
         child: Column(
           children: [
-            Padding(padding: EdgeInsets.all(20),),
-            Text("Komputer", style: TextStyle(fontSize: 30),),
-            Padding(padding: EdgeInsets.all(20),),
-            Icon(Icons.computer, size: 90,)
+            Padding(
+              padding: EdgeInsets.all(20),
+            ),
+            Text(
+              "Komputer",
+              style: TextStyle(fontSize: 30),
+            ),
+            Padding(
+              padding: EdgeInsets.all(20),
+            ),
+            Icon(
+              Icons.computer,
+              size: 90,
+            )
           ],
         ),
       ),

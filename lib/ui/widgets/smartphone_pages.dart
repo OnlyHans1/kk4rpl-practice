@@ -9,10 +9,20 @@ class Smartphone extends StatelessWidget {
       child: const Center(
         child: Column(
           children: [
-            Padding(padding: EdgeInsets.all(20),),
-            Text("Smartphone", style: TextStyle(fontSize: 30),),
-            Padding(padding: EdgeInsets.all(20),),
-            Icon(Icons.smartphone, size: 90,)
+            Padding(
+              padding: EdgeInsets.all(20),
+            ),
+            Text(
+              "Smartphone",
+              style: TextStyle(fontSize: 30),
+            ),
+            Padding(
+              padding: EdgeInsets.all(20),
+            ),
+            Icon(
+              Icons.smartphone,
+              size: 90,
+            )
           ],
         ),
       ),

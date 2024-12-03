@@ -74,10 +74,7 @@ class ListTutorial extends StatelessWidget {
                     ),
                     const Text(
                       "Ini adalah deksripsi tutorial ...",
-                      style: TextStyle(
-                        fontSize: 13,
-                        color: Colors.grey
-                      ),
+                      style: TextStyle(fontSize: 13, color: Colors.grey),
                     ),
                   ],
                 ),

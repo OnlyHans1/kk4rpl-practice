@@ -11,16 +11,14 @@ class TabbarPages extends StatefulWidget {
   State<TabbarPages> createState() => _TabbarPagesState();
 }
 
-class _TabbarPagesState extends State<TabbarPages> with SingleTickerProviderStateMixin {
+class _TabbarPagesState extends State<TabbarPages>
+    with SingleTickerProviderStateMixin {
   late TabController controller;
 
   @override
   void initState() {
-    super.initState(); 
-    controller = TabController(
-      length: 4, 
-      vsync: this
-    );
+    super.initState();
+    controller = TabController(length: 4, vsync: this);
   }
 
   @override
@@ -34,9 +32,7 @@ class _TabbarPagesState extends State<TabbarPages> with SingleTickerProviderStat
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.amber,
-        title: const Text(
-          "Daftar Elektronik"
-        ),
+        title: const Text("Daftar Elektronik"),
         bottom: TabBar(
           controller: controller,
           tabs: const [
@@ -44,10 +40,7 @@ class _TabbarPagesState extends State<TabbarPages> with SingleTickerProviderStat
               icon: Icon(Icons.computer),
               text: "Komputer",
             ),
-            Tab(
-              icon: Icon(Icons.headset),
-              text: "Headset"
-            ),
+            Tab(icon: Icon(Icons.headset), text: "Headset"),
             Tab(
               icon: Icon(Icons.radio),
               text: "Radio",
@@ -60,7 +53,7 @@ class _TabbarPagesState extends State<TabbarPages> with SingleTickerProviderStat
         ),
       ),
       body: TabBarView(
-        controller: controller, 
+        controller: controller,
         children: const [
           komputer.Komputer(),
           headset.Headset(),
@@ -68,11 +61,10 @@ class _TabbarPagesState extends State<TabbarPages> with SingleTickerProviderStat
           smartphone.Smartphone(),
         ],
       ),
-
       bottomNavigationBar: Material(
         color: Colors.amber,
         child: TabBar(
-          controller: controller, 
+          controller: controller,
           tabs: const [
             Tab(
               icon: Icon(Icons.computer),

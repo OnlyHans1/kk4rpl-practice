@@ -48,7 +48,7 @@ class _ListViewJsonPagesState extends State<ListViewJsonPages> {
                     Text(
                       dataJSON[index]['title'],
                       style: const TextStyle(
-                        fontSize: 20, 
+                        fontSize: 20,
                         color: Colors.blue,
                       ),
                     ),

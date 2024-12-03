@@ -51,15 +51,21 @@ class ListPages extends StatelessWidget {
           ),
           const CustomButton(
             text: 'List View Page',
-            icon: Icons.style,
+            icon: Icons.view_day,
             route: '/ListView',
             buttonColor: Colors.blue,
           ),
           CustomButton(
             text: 'List View Json Page',
-            icon: Icons.style,
+            icon: Icons.javascript,
             route: '/ListViewJson',
             buttonColor: Colors.blueGrey[300],
+          ),
+          const CustomButton(
+            text: 'Input, Alert, Snackbar Page',
+            icon: Icons.input,
+            route: '/SnackbarPage',
+            buttonColor: Colors.pink,
           ),
         ],
       ),
