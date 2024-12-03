@@ -8,46 +8,58 @@ class ListPages extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Flutter Practice Pages'),
+        title: const Text('List Pages Flutter'),
         centerTitle: true,
       ),
       body: ListView(
-        children: const [
-          CustomButton(
+        children: [
+          const CustomButton(
             text: 'Appbar Page',
             icon: Icons.app_registration,
             route: '/AppbarPage',
             buttonColor: Colors.red,
           ),
-          CustomButton(
+          const CustomButton(
             text: 'Card Page',
             icon: Icons.credit_card,
             route: '/CardPage',
             buttonColor: Colors.green,
           ),
-          CustomButton(
+          const CustomButton(
             text: 'Image Page',
             icon: Icons.image,
             route: '/ImagePage',
             buttonColor: Colors.purple,
           ),
-          CustomButton(
+          const CustomButton(
             text: 'Navigation Page',
             icon: Icons.navigation,
             route: '/Navigation',
             buttonColor: Colors.orange,
           ),
-          CustomButton(
+          const CustomButton(
             text: 'Tabbar Page',
             icon: Icons.tab,
             route: '/TabbarPage',
             buttonColor: Colors.teal,
           ),
-          CustomButton(
+          const CustomButton(
             text: 'Style Page',
             icon: Icons.style,
             route: '/StylePage',
             buttonColor: Colors.indigo,
+          ),
+          const CustomButton(
+            text: 'List View Page',
+            icon: Icons.style,
+            route: '/ListView',
+            buttonColor: Colors.blue,
+          ),
+          CustomButton(
+            text: 'List View Json Page',
+            icon: Icons.style,
+            route: '/ListViewJson',
+            buttonColor: Colors.blueGrey[300],
           ),
         ],
       ),

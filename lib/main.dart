@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:kk4rpl_project/ui/pages/list_view_json_pages.dart';
+import 'package:kk4rpl_project/ui/pages/list_view_pages.dart';
 import 'package:kk4rpl_project/ui/pages/navigation_pages.dart';
 import 'package:kk4rpl_project/ui/pages/appbar_pages.dart';
 import 'package:kk4rpl_project/ui/pages/card_pages.dart';
@@ -17,6 +19,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: const HalHallo(),
       routes: <String, WidgetBuilder>{
         '/ListPages': (BuildContext context) => const ListPages(),
@@ -27,6 +30,8 @@ class MyApp extends StatelessWidget {
         '/ImagePage': (BuildContext context) => const ImagePages(),
         '/TabbarPage': (BuildContext context) => const TabbarPages(),
         '/StylePage': (BuildContext context) => const StylePages(),
+        '/ListView' : (BuildContext context) => const ListViewPages(),
+        '/ListViewJson': (BuildContext context) => const ListViewJsonPages(),
       },
     );
   }
