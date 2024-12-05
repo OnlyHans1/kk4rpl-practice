@@ -12,44 +12,44 @@ class ListPages extends StatelessWidget {
         centerTitle: true,
       ),
       body: ListView(
-        children: [
-          const CustomButton(
+        children: const [
+          CustomButton(
             text: 'Appbar Page',
             icon: Icons.app_registration,
             route: '/AppbarPage',
             buttonColor: Colors.red,
           ),
-          const CustomButton(
+          CustomButton(
             text: 'Card Page',
             icon: Icons.credit_card,
             route: '/CardPage',
             buttonColor: Colors.green,
           ),
-          const CustomButton(
+          CustomButton(
             text: 'Image Page',
             icon: Icons.image,
             route: '/ImagePage',
             buttonColor: Colors.purple,
           ),
-          const CustomButton(
+          CustomButton(
             text: 'Navigation Page',
             icon: Icons.navigation,
             route: '/Navigation',
             buttonColor: Colors.orange,
           ),
-          const CustomButton(
+          CustomButton(
             text: 'Tabbar Page',
             icon: Icons.tab,
             route: '/TabbarPage',
             buttonColor: Colors.teal,
           ),
-          const CustomButton(
+          CustomButton(
             text: 'Style Page',
             icon: Icons.style,
             route: '/StylePage',
             buttonColor: Colors.indigo,
           ),
-          const CustomButton(
+          CustomButton(
             text: 'List View Page',
             icon: Icons.view_day,
             route: '/ListView',
@@ -59,13 +59,19 @@ class ListPages extends StatelessWidget {
             text: 'List View Json Page',
             icon: Icons.javascript,
             route: '/ListViewJson',
-            buttonColor: Colors.blueGrey[300],
+            buttonColor: Colors.blueGrey,
           ),
-          const CustomButton(
+          CustomButton(
             text: 'Input, Alert, Snackbar Page',
             icon: Icons.input,
             route: '/SnackbarPage',
             buttonColor: Colors.pink,
+          ),
+          CustomButton(
+            text: 'Sidebar (Drawer) Page',
+            icon: Icons.bathroom_sharp,
+            route: '/DrawerPage',
+            buttonColor: Colors.grey,
           ),
         ],
       ),
