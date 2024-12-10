@@ -24,7 +24,7 @@ class _GradientPagesState extends State<GradientPages> {
         ),
         child: PageView.builder(
           controller: PageController(viewportFraction: 0.8),
-          itemCount: gambar.length, // Perbaikan: tambahkan itemCount
+          itemCount: gambar.length,
           itemBuilder: (BuildContext context, int i) {
             return Padding(
               padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 22),
@@ -72,10 +72,12 @@ class HalamanDua extends StatefulWidget {
 
 class _HalamanDuaState extends State<HalamanDua> {
   Color warna = Colors.grey;
+  Color gradientColor = Colors.blue;
 
-  void _pilihannya(Pilihan pilihan){
+  void _pilihannya(Pilihan pilihan) {
     setState(() {
       warna = pilihan.warna;
+      gradientColor = pilihan.warna;
     });
   }
 
@@ -84,50 +86,64 @@ class _HalamanDuaState extends State<HalamanDua> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Dota Hero"),
-        backgroundColor: warna, // Perbaikan: gunakan variabel warna
+        backgroundColor: warna,
         actions: [
           PopupMenuButton<Pilihan>(
-            onSelected: _pilihannya,
-            itemBuilder: (BuildContext context){
-              return listPilihan.map((Pilihan x){
-                return PopupMenuItem<Pilihan>(
-                  value: x,
-                  child: Text(x.teks),
-                );
-              }).toList();
-            }
-          ),
+              onSelected: _pilihannya,
+              itemBuilder: (BuildContext context) {
+                return listPilihan.map((Pilihan x) {
+                  return PopupMenuItem<Pilihan>(
+                    value: x,
+                    child: Text(x.teks),
+                  );
+                }).toList();
+              }),
         ],
       ),
       body: Stack(
         children: [
           Container(
             decoration: BoxDecoration(
-              gradient: RadialGradient(center: Alignment.center, colors: [
-                Colors.blue,
-                Colors.white,
-                Colors.black.withOpacity(0.9)
-              ]),
+              gradient: RadialGradient(
+                center: Alignment.center,
+                colors: [
+                  gradientColor,
+                  Colors.white,
+                  Colors.black.withOpacity(0.9),
+                ],
+              ),
             ),
           ),
           Center(
             child: Hero(
-                tag: widget.gambar,
+              tag: widget.gambar,
+              child: Container(
+                height: 200,
+                width: 200,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  gradient: RadialGradient(
+                    center: Alignment.center,
+                    colors: [
+                      gradientColor,
+                      gradientColor.withOpacity(0.7),
+                      Colors.black.withOpacity(0.5),
+                    ],
+                  ),
+                ),
                 child: ClipOval(
-                  child: SizedBox(
-                    height: 200,
-                    width: 200,
-                    child: Material(
-                      child: InkWell(
-                        onTap: () => Navigator.of(context).pop(),
-                        child: Image.asset(
-                          "assets/${widget.gambar}",
-                          fit: BoxFit.cover,
-                        ),
+                  child: Material(
+                    child: InkWell(
+                      onTap: () => Navigator.of(context).pop(),
+                      child: Image.asset(
+                        "assets/${widget.gambar}",
+                        fit: BoxFit.cover,
                       ),
                     ),
                   ),
-                )),
+                ),
+              ),
+            ),
           ),
         ],
       ),
@@ -139,7 +155,7 @@ class Pilihan {
   final String teks;
   final Color warna;
 
-  const Pilihan({required this.teks, required this.warna}); 
+  const Pilihan({required this.teks, required this.warna});
 }
 
 List<Pilihan> listPilihan = <Pilihan>[

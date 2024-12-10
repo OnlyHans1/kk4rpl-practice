@@ -128,7 +128,7 @@ class _FormPagesState extends State<FormPages> {
                   children: [
                     const Text(
                       "Agama ",
-                      style: TextStyle(fontSize: 20, color: Colors.blue),
+                      style: TextStyle(fontSize: 20, color: Colors.black),
                     ),
                     DropdownButton<String>(
                       value: _agama,
@@ -149,7 +149,12 @@ class _FormPagesState extends State<FormPages> {
                     kirimdata();
                   },
                   style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
-                  child: const Text("OK"),
+                  child: const Text(
+                    "OK",
+                    style: TextStyle(
+                      color: Colors.white
+                    ),
+                  ),
                 ),
               ],
             ),
