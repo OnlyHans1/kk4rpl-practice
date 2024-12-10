@@ -16,7 +16,7 @@ class _GradientPagesState extends State<GradientPages> {
     timeDilation = 5;
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           gradient: LinearGradient(
               begin: FractionalOffset.topRight,
               end: FractionalOffset.bottomLeft,
@@ -24,9 +24,10 @@ class _GradientPagesState extends State<GradientPages> {
         ),
         child: PageView.builder(
           controller: PageController(viewportFraction: 0.8),
+          itemCount: gambar.length, // Perbaikan: tambahkan itemCount
           itemBuilder: (BuildContext context, int i) {
             return Padding(
-              padding: EdgeInsets.symmetric(horizontal: 5, vertical: 22),
+              padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 22),
               child: Material(
                 borderRadius: BorderRadius.circular(15),
                 child: Stack(
@@ -54,7 +55,6 @@ class _GradientPagesState extends State<GradientPages> {
               ),
             );
           },
-          itemCount: gambar.length,
         ),
       ),
     );
@@ -83,16 +83,16 @@ class _HalamanDuaState extends State<HalamanDua> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Dota Hero"),
-        backgroundColor: Colors.grey,
+        title: const Text("Dota Hero"),
+        backgroundColor: warna, // Perbaikan: gunakan variabel warna
         actions: [
           PopupMenuButton<Pilihan>(
             onSelected: _pilihannya,
             itemBuilder: (BuildContext context){
               return listPilihan.map((Pilihan x){
                 return PopupMenuItem<Pilihan>(
-                  child: Text(x.teks),
                   value: x,
+                  child: Text(x.teks),
                 );
               }).toList();
             }
@@ -139,14 +139,11 @@ class Pilihan {
   final String teks;
   final Color warna;
 
-  const Pilihan(
-    this.teks, 
-    this.warna,
-  );
+  const Pilihan({required this.teks, required this.warna}); 
 }
 
-List<Pilihan> listPilihan = const <Pilihan>[
-  Pilihan (teks: "Strength", warna: Colors.red),
-  Pilihan (teks: "Agility", warna: Colors.green),
-  Pilihan (teks: "Intelligence", warna: Colors.blue),
-]
+List<Pilihan> listPilihan = <Pilihan>[
+  const Pilihan(teks: "Strength", warna: Colors.red),
+  const Pilihan(teks: "Agility", warna: Colors.green),
+  const Pilihan(teks: "Intelligence", warna: Colors.blue),
+];

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kk4rpl_project/ui/pages/drawer_pages.dart';
+import 'package:kk4rpl_project/ui/pages/form_pages.dart';
+import 'package:kk4rpl_project/ui/pages/gradient_pages.dart';
 import 'package:kk4rpl_project/ui/pages/gridview_pages.dart';
 import 'package:kk4rpl_project/ui/pages/list_view_json_pages.dart';
 import 'package:kk4rpl_project/ui/pages/list_view_pages.dart';
@@ -38,6 +40,8 @@ class MyApp extends StatelessWidget {
         '/SnackbarPage': (BuildContext context) => const SnackbarPages(),
         '/DrawerPage' : (BuildContext context) => const DrawerPages(),
         '/GridViewPage' : (BuildContext context) => const GridViewPage(),
+        '/GradientPage' : (BuildContext context) => const GradientPages(),
+        '/FormPage' : (BuildContext context) => const FormPages(),
       },
     );
   }
