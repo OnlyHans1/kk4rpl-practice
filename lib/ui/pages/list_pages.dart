@@ -79,6 +79,18 @@ class ListPages extends StatelessWidget {
             route: '/GridViewPage',
             buttonColor: Colors.grey,
           ),
+          CustomButton(
+            text: 'Sidebar (Drawer) Page',
+            icon: Icons.bathroom_sharp,
+            route: '/GridViewPage',
+            buttonColor: Colors.grey,
+          ),
+          CustomButton(
+            text: 'Sidebar (Drawer) Page',
+            icon: Icons.bathroom_sharp,
+            route: '/GridViewPage',
+            buttonColor: Colors.grey,
+          ),
         ],
       ),
     );
