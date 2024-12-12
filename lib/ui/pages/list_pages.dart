@@ -91,6 +91,12 @@ class ListPages extends StatelessWidget {
             route: '/FormPage',
             buttonColor: Colors.green[600],
           ),
+          CustomButton(
+            text: 'Animation Page',
+            icon: Icons.animation,
+            route: '/AnimationPage',
+            buttonColor: const Color.fromARGB(255, 5, 3, 105),
+          ),
         ],
       ),
     );

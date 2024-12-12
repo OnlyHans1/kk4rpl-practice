@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kk4rpl_project/ui/pages/animation_pages.dart';
 import 'package:kk4rpl_project/ui/pages/drawer_pages.dart';
 import 'package:kk4rpl_project/ui/pages/form_pages.dart';
 import 'package:kk4rpl_project/ui/pages/gradient_pages.dart';
@@ -42,6 +43,7 @@ class MyApp extends StatelessWidget {
         '/GridViewPage' : (BuildContext context) => const GridViewPage(),
         '/GradientPage' : (BuildContext context) => const GradientPages(),
         '/FormPage' : (BuildContext context) => const FormPages(),
+        '/AnimationPage' : (BuildContext context) => const LoginAnimation(),
       },
     );
   }
