@@ -8,8 +8,10 @@ class LoginAnimation extends StatefulWidget {
   State<LoginAnimation> createState() => _LoginAnimationState();
 }
 
-class _LoginAnimationState extends State<LoginAnimation> with SingleTickerProviderStateMixin {
+class _LoginAnimationState extends State<LoginAnimation>
+    with SingleTickerProviderStateMixin {
   var statusClick = 0;
+  String msg = '';
 
   TextEditingController editingControllerUser = TextEditingController();
   TextEditingController editingControllerPass = TextEditingController();
@@ -19,29 +21,28 @@ class _LoginAnimationState extends State<LoginAnimation> with SingleTickerProvid
   @override
   void initState() {
     super.initState();
-    
+
     editingControllerUser = TextEditingController(text: '');
     editingControllerPass = TextEditingController(text: '');
-    
+
     animationControllerButton = AnimationController(
       vsync: this,
       duration: const Duration(seconds: 3),
     )..addStatusListener((status) {
-      if (status == AnimationStatus.dismissed) {
-        setState(() {
-          statusClick = 0;
-        });
-      }
-    });
+        if (status == AnimationStatus.dismissed) {
+          setState(() {
+            statusClick = 0;
+            msg = "Username or Password Inccorect";
+          });
+        }
+      });
   }
 
   Future<void> _playAnimation() async {
     try {
       await animationControllerButton.forward();
       await animationControllerButton.reverse();
-    } on TickerCanceled {
-      // Tangani kasus jika animasi dibatalkan
-    }
+    } on TickerCanceled {}
   }
 
   @override
@@ -58,9 +59,7 @@ class _LoginAnimationState extends State<LoginAnimation> with SingleTickerProvid
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/bg.jpg"), 
-            fit: BoxFit.cover
-          ),
+              image: AssetImage("assets/bg.jpg"), fit: BoxFit.cover),
         ),
         child: Container(
           decoration: const BoxDecoration(
@@ -94,12 +93,11 @@ class _LoginAnimationState extends State<LoginAnimation> with SingleTickerProvid
                             TextField(
                               controller: editingControllerUser,
                               decoration: const InputDecoration(
-                                icon: Icon(
-                                  Icons.person_outline,
-                                  color: Colors.white,
-                                ),
-                                hintText: "Username"
-                              ),
+                                  icon: Icon(
+                                    Icons.person_outline,
+                                    color: Colors.white,
+                                  ),
+                                  hintText: "Username"),
                             ),
                             const Padding(
                               padding: EdgeInsets.all(10),
@@ -107,26 +105,30 @@ class _LoginAnimationState extends State<LoginAnimation> with SingleTickerProvid
                             TextField(
                               controller: editingControllerPass,
                               decoration: const InputDecoration(
-                                icon: Icon(
-                                  Icons.lock_outline,
-                                  color: Colors.white,
-                                ),
-                                hintText: "Password"
-                              ),
+                                  icon: Icon(
+                                    Icons.lock_outline,
+                                    color: Colors.white,
+                                  ),
+                                  hintText: "Password"),
+                            ),
+                            Text(
+                              msg,
+                              style:
+                                  TextStyle(color: Colors.yellow, fontSize: 18),
                             ),
                             TextButton(
                               onPressed: null,
                               style: TextButton.styleFrom(
-                                padding: const EdgeInsets.only(top: 220, bottom: 30),
+                                padding:
+                                    const EdgeInsets.only(top: 200, bottom: 30),
                               ),
                               child: const Text(
                                 "Don't have an account? Sign Up here",
                                 style: TextStyle(
-                                  fontSize: 12,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w300,
-                                  letterSpacing: 0.5
-                                ),
+                                    fontSize: 12,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w300,
+                                    letterSpacing: 0.5),
                               ),
                             ),
                           ],
@@ -170,17 +172,15 @@ class SignIn extends StatelessWidget {
         width: 320,
         height: 60,
         decoration: BoxDecoration(
-          color: Colors.red[700],
-          borderRadius: const BorderRadius.all(Radius.circular(30))
-        ),
+            color: Colors.red[700],
+            borderRadius: const BorderRadius.all(Radius.circular(30))),
         child: const Text(
           "Sign In",
           style: TextStyle(
-            color: Colors.white,
-            fontSize: 20,
-            fontWeight: FontWeight.w300,
-            letterSpacing: 0.3
-          ),
+              color: Colors.white,
+              fontSize: 20,
+              fontWeight: FontWeight.w300,
+              letterSpacing: 0.3),
         ),
       ),
     );
